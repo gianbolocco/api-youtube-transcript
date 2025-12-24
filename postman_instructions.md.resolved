@@ -1,0 +1,25 @@
+# Cómo probar con Postman
+
+1.  **Asegúrate de que el servidor esté corriendo** (He propuesto un comando para iniciarlo).
+    *   URL Base: `http://127.0.0.1:8000`
+
+2.  **Crear una nueva Request en Postman**:
+    *   Selecciona el método **GET**.
+
+3.  **Probar Transcripción (JSON)**:
+    *   URL: `http://127.0.0.1:8000/transcript/dQw4w9WgXcQ`
+    *   Click en **Send**.
+
+4.  **Probar Transcripción (Texto Plano)**:
+    *   URL: `http://127.0.0.1:8000/transcript/dQw4w9WgXcQ`
+    *   Pestaña **Params**:
+        *   Key: `format`, Value: [text](file:///c:/Users/gianl/OneDrive/Escritorio/transcriptionYoutube/test_api.py#35-45)
+    *   Click en **Send**.
+
+5.  **Probar Idioma Específico**:
+    *   URL: `http://127.0.0.1:8000/transcript/dQw4w9WgXcQ`
+    *   Pestaña **Params**:
+        *   Key: `languages`, Value: [es](file:///c:/Users/gianl/OneDrive/Escritorio/transcriptionYoutube/test_api.py#14-20) (o el idioma que quieras probar)
+    *   Click en **Send**.
+
+command: python -m uvicorn main:app --reload
